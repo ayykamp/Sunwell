@@ -126,6 +126,11 @@ itself. For example, a spell or weapon will not render a race text even if given
 Sunwell is a [HearthSim](https://hearthsim.info) project. All development
 happens on our IRC channel `#hearthsim` on [Freenode](https://freenode.net).
 
+# TODO
+- add new sets
+- add demon hunter
+- add spell schools
+- add correct weapon models
 
 # License
 
