@@ -13,6 +13,7 @@ export enum CardClass {
 	DREAM = 11,
 	NEUTRAL = 12,
 	WHIZBANG = 13,
+	DEMONHUNTER = 14,
 }
 
 export enum Race {
