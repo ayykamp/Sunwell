@@ -17,13 +17,13 @@ https://sunwell.hearthsim.net/branches/master/sunwell.cdn.min.js
 
 The following dependencies are required to build Sunwell:
 
-- [Yarn](https://github.com/yarnpkg/yarn)
+- [NPM](https://github.com/npm/cli)
 - [Webpack](https://github.com/webpack/webpack)
 
-Run `yarn install` to install the dependencies. Then, run `webpack` to build
+Run `npm i` to install the dependencies. Then, run `PLATFROM=web webpack` to build
 the project into `dist/sunwell.js`.
 
-If you run `NODE_ENV=production webpack`, it will instead build a minified
+If you run `NODE_ENV=production PLATFORM=web webpack`, it will instead build a minified
 version into `dist/sunwell.min.js`.
 
 The assets in the `assets/` folder can be copied as-is.

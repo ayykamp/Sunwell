@@ -20,11 +20,11 @@
 		"url": "git+https://github.com/HearthSim/Sunwell.git"
 	},
 	"scripts": {
-		"prepublishOnly": "yarn build",
+		"prepublishOnly": "npm run build",
 		"build": "PLATFORM=web webpack",
-		"format": "yarn format:prettier",
+		"format": "npm run format:prettier",
 		"format:prettier": "prettier --write *.{js,json} src/**/*.{ts,tsx,js}",
-		"lint": "yarn lint:prettier",
+		"lint": "npm run lint:prettier",
 		"lint:prettier": "prettier -l *.{js,json} src/**/*.{ts,tsx,js}",
 		"qa": "tslint src/*.ts src/**/*.ts",
 		"dev": "tsc --watch"
