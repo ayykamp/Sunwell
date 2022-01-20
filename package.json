@@ -2,14 +2,18 @@
 	"name": "sunwell",
 	"version": "0.10.0",
 	"description": "Canvas-based high quality Hearthstone card renderer",
-	"keywords": ["hearthstone"],
+	"keywords": [
+		"hearthstone"
+	],
 	"homepage": "https://github.com/HearthSim/Sunwell#readme",
 	"bugs": {
 		"url": "https://github.com/HearthSim/Sunwell/issues"
 	},
 	"license": "MIT",
 	"author": "Jerome Leclanche <jerome@leclan.ch>",
-	"contributors": ["Benedict Etzel <benedict@hearthsim.net>"],
+	"contributors": [
+		"Benedict Etzel <benedict@hearthsim.net>"
+	],
 	"main": "dist/sunwell.node.js",
 	"repository": {
 		"type": "git",
@@ -26,22 +30,22 @@
 		"dev": "tsc --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^8.0.13",
-		"prettier": "^1.9.1",
-		"request": "^2.81.0",
-		"ts-loader": "^2.0.1",
-		"tslint": "^5.5.0",
-		"typescript": "^2.4.1",
-		"webpack": "^3.2.0",
-		"webpack-node-externals": "^1.6.0"
+		"@types/node": "^8.10.66",
+		"prettier": "^1.19.1",
+		"ts-loader": "^2.3.7",
+		"tslint": "^5.20.1",
+		"typescript": "^2.9.2",
+		"webpack": "^5.66.0",
+		"webpack-cli": "^4.9.1",
+		"webpack-node-externals": "^1.7.2"
 	},
 	"dependencies": {
-		"argparse": "^1.0.9",
-		"canvas": "^2.0.0-alpha.12",
+		"argparse": "^1.0.10",
+		"canvas": "^2.9.0",
 		"chars": "^2.3.0",
 		"linebreak": "^0.3.0",
-		"mkdirp": "^0.5.1",
-		"promise": "^8.0.1"
+		"mkdirp": "^0.5.5",
+		"promise": "^8.1.0"
 	},
 	"prettier": {
 		"printWidth": 100,
