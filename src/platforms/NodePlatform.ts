@@ -1,4 +1,4 @@
-import * as Canvas from "canvas";
+import { Canvas, Image, createCanvas } from "canvas";
 import * as fs from "fs";
 
 import IPlatform from "./IPlatform";
@@ -6,11 +6,11 @@ import IPlatform from "./IPlatform";
 export default class NodePlatform implements IPlatform {
 	public name = "NODE";
 	public buffers = [];
-	public Image = Canvas.Image;
+	public Image = Image;
 	public Promise = Promise;
 
-	public getBuffer(width: number, height: number, clear: boolean): void {
-		return Canvas.createCanvas(width, height);
+	public getBuffer(width: number, height: number, clear: boolean): Canvas {
+		return createCanvas(width, height);
 	}
 
 	public freeBuffer(buffer: any): void {

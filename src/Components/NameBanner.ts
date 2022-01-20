@@ -1,4 +1,4 @@
-import chars from "chars";
+import * as chars from "chars";
 import {getPointOnCurve} from "../helpers";
 import {ICoords, IPoint} from "../interfaces";
 import Component from "./Component";

@@ -129,19 +129,19 @@ export default class Sunwell {
 							}
 							delete assetListeners[path];
 						}
-						resolve();
+						resolve(true);
 					},
 					() => {
 						sw.error("Error loading asset:", path);
 						// An asset load error should not reject the promise
-						resolve();
+						resolve(true);
 					}
 				);
 			} else if (!assets[path].complete) {
 				assetListeners[path] = assetListeners[path] || [];
 				assetListeners[path].push(resolve);
 			} else {
-				resolve();
+				resolve(true);
 			}
 		});
 	}

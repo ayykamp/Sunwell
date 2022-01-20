@@ -1,5 +1,5 @@
-import chars from "chars";
-import LineBreaker from "linebreak";
+import * as chars from "chars";
+import * as LineBreaker from "linebreak";
 import {CardType} from "../Enums";
 import {contextBoundingBox} from "../helpers";
 import Component from "./Component";

@@ -1,4 +1,4 @@
-import chars from "chars";
+import * as chars from "chars";
 import {contextBoundingBox} from "../helpers";
 import Component from "./Component";
 
