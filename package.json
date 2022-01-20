@@ -30,8 +30,9 @@
 		"dev": "tsc --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^8.10.66",
+		"@types/node": "^17.0.10",
 		"prettier": "^1.19.1",
+		"transform-loader": "^0.2.4",
 		"ts-loader": "^9.2.6",
 		"tslint": "^5.20.1",
 		"typescript": "^4.5.4",
@@ -41,10 +42,13 @@
 	},
 	"dependencies": {
 		"argparse": "^1.0.10",
+		"assert": "^2.0.0",
+		"buffer": "^6.0.3",
 		"canvas": "^2.9.0",
 		"chars": "^2.3.0",
 		"linebreak": "^0.3.0",
 		"mkdirp": "^0.5.5",
+		"process": "^0.11.10",
 		"promise": "^8.1.0"
 	},
 	"prettier": {
