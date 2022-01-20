@@ -14,8 +14,8 @@
 
 <body>
 	<canvas id="cardCanvas"></canvas>
-	<script src="../dist/sunwell.cdn.js"></script>
-	<script>
+	<script type="module">
+		import Sunwell from "../dist/sunwell.js"
 		let sunwell = new Sunwell({
 			assetFolder: '../assets/',
 			titleFont: "belwe_fsextrabold",
@@ -50,7 +50,7 @@
 			"rarity": "LEGENDARY",
 			"set": "EXPERT1",
 			"type": "MINION",
-			"texture": "../textures/EX1_116.jpg"
+			"texture": "../textures/EX1_116.png"
 		}, 512, false, cardCanvas, function() {
 			console.log('done')
 		});
