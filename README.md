@@ -129,8 +129,8 @@ happens on our IRC channel `#hearthsim` on [Freenode](https://freenode.net).
 # TODO
 - add new sets ✅
 - add demon hunter ✅
-- add spell schools (#1)
-- add correct weapon models (#2)
+- add spell schools ( [#1](https://github.com/ayykamp/Sunwell/issues/1) )
+- add correct weapon models ( [#2](https://github.com/ayykamp/Sunwell/issues/2) )
 
 # License
 
