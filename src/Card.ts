@@ -9,10 +9,11 @@ import HealthGem from "./Components/HealthGem";
 import MultiClassBanner from "./Components/MultiClassBanner";
 import NameBanner from "./Components/NameBanner";
 import RaceBanner from "./Components/RaceBanner";
+import SpellSchoolBanner from "./Components/SpellSchoolBanner";
 import RarityGem from "./Components/RarityGem";
 import Watermark from "./Components/Watermark";
 import {CardClass, CardSet, MultiClassGroup, Rarity} from "./Enums";
-import {getCardFrameClass, getNumberStyle, getRaceText, getRarityGem} from "./helpers";
+import {getCardFrameClass, getNumberStyle, getRaceText, getRarityGem, getSpellSchool} from "./helpers";
 import {ICoords, IPoint} from "./interfaces";
 import Sunwell from "./Sunwell";
 
@@ -24,6 +25,7 @@ export default abstract class Card {
 	public texture;
 	public canvas: HTMLCanvasElement;
 	public raceText: string;
+	public spellSchoolText: string;
 	public language: string;
 	public costColor: string;
 	public attackColor: string;
@@ -40,6 +42,7 @@ export default abstract class Card {
 	public healthGem: HealthGem;
 	public multiClassBanner: MultiClassBanner;
 	public raceBanner: RaceBanner;
+	public spellSchoolBanner: SpellSchoolBanner;
 	public nameBanner: NameBanner;
 	public rarityGem: RarityGem;
 	public watermark: Watermark;
@@ -55,7 +58,17 @@ export default abstract class Card {
 		sWidth: 408,
 		sHeight: 69,
 	};
-
+	public spellSchoolBannerAsset: string = "";
+	// TODO Get better asset and fix coords
+	public spellSchoolTextCoords: ICoords = {dx: 337, dy: 827};
+	public spellSchoolBannerCoords: ICoords = {
+		dx: 171,
+		dy: 788,
+		dWidth: 319,
+		dHeight: 58,
+		sWidth: 319,
+		sHeight: 58,
+	};
 	public abstract baseCardFrameAsset: string;
 	public abstract baseCardFrameCoords: ICoords;
 	public abstract baseRarityGemAsset: string;
@@ -93,6 +106,7 @@ export default abstract class Card {
 		this.opposing = props.opposing || false;
 
 		this.raceText = getRaceText(this.cardDef.race, this.cardDef.type, this.language);
+		this.spellSchoolText = getSpellSchool(this.cardDef.spellSchool, this.cardDef.type);
 		this.costColor = getNumberStyle(props.costStyle);
 		this.attackColor = getNumberStyle(props.costStyle);
 		this.healthColor = getNumberStyle(props.healthStyle);
@@ -109,6 +123,7 @@ export default abstract class Card {
 		this.multiClassBanner = new MultiClassBanner(sunwell, this);
 		this.nameBanner = new NameBanner(sunwell, this);
 		this.raceBanner = new RaceBanner(sunwell, this);
+		this.spellSchoolBanner = new SpellSchoolBanner(sunwell, this);
 		this.rarityGem = new RarityGem(sunwell, this);
 		this.watermark = new Watermark(sunwell, this);
 	}
@@ -184,6 +199,7 @@ export default abstract class Card {
 		assetsToLoad.push(...this.healthGem.assets());
 		assetsToLoad.push(...this.multiClassBanner.assets());
 		assetsToLoad.push(...this.raceBanner.assets());
+		assetsToLoad.push(...this.spellSchoolBanner.assets());
 		assetsToLoad.push(...this.rarityGem.assets());
 		assetsToLoad.push(...this.watermark.assets());
 		assetsToLoad.push(...this.eliteDragon.assets());
@@ -246,6 +262,7 @@ export default abstract class Card {
 			this.eliteDragon.render(context, ratio);
 			this.nameBanner.render(context, ratio);
 			this.raceBanner.render(context, ratio);
+			this.spellSchoolBanner.render(context, ratio);
 			this.attackGem.render(context, ratio);
 			this.multiClassBanner.render(context, ratio);
 			this.costGem.render(context, ratio);

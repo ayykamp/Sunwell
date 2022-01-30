@@ -1,4 +1,4 @@
-import {CardClass, CardSet, CardType, MultiClassGroup, Race, Rarity} from "./Enums";
+import {CardClass, CardSet, CardType, MultiClassGroup, Race, Rarity, SpellSchool} from "./Enums";
 import {cleanEnum} from "./helpers";
 
 export default class CardDef {
@@ -17,6 +17,7 @@ export default class CardDef {
 	public multiClassGroup: MultiClassGroup;
 	public rarity: Rarity;
 	public race: Race;
+	public spellSchool: SpellSchool;
 	public silenced: boolean;
 	public text: string;
 	public type: CardType;
@@ -34,6 +35,7 @@ export default class CardDef {
 		this.multiClassGroup = cleanEnum(props.multiClassGroup, MultiClassGroup) as MultiClassGroup;
 		this.name = props.name || "";
 		this.race = cleanEnum(props.race, Race) as Race;
+		this.spellSchool = cleanEnum(props.spellSchool, SpellSchool) as SpellSchool;
 		this.rarity = cleanEnum(props.rarity, Rarity) as Rarity;
 		this.silenced = props.silenced || false;
 		this.type = cleanEnum(props.type, CardType) as CardType;

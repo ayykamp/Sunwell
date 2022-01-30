@@ -18,11 +18,11 @@
 		import Sunwell from "../dist/sunwell.js"
 		let sunwell = new Sunwell({
 			assetFolder: '../assets/',
-			titleFont: "belwe_fsextrabold",
-			bodyFontRegular: "franklin_gothic_fsMdCn",
-			bodyFontItalic: "franklin_gothic_fsMdCnIt",
-			bodyFontBold: "franklin_gothic_fsDemiCn",
-			bodyFontBoldItalic: "franklin_gothic_fsDemiCn",
+			titleFont: "Belwe Bd BT",
+			bodyFontRegular: "Belwe Lt BT",
+			bodyFontItalic: "",
+			bodyFontBold: "Belwe Bd BT",
+			bodyFontBoldItalic: "Belwe Bd BT",
 			bodyFontSize: 38,
 			bodyLineHeight: 40,
 			bodyFontOffset: {x: 0, y: 26},
@@ -37,10 +37,10 @@
 			"flavor": "At least he has Angry Chicken.",
 			"artist": "Gabe from Penny Arcade",
 			"attack": 6,
-			"cardClass": "NEUTRAL",
+			"cardClass": "HUNTER",
 			"collectible": true,
 			"cost": 5,
-			"elite": true,
+			// "elite": true,
 			"faction": "ALLIANCE",
 			"health": 2,
 			"mechanics": [
@@ -49,7 +49,9 @@
 			],
 			"rarity": "LEGENDARY",
 			"set": "EXPERT1",
-			"type": "MINION",
+			"type": "SPELL",
+			"spellSchool": "ARCANE",
+			// "spellSchoolText": "ARCANE",
 			"texture": "../textures/EX1_116.png"
 		}, 512, false, cardCanvas, function() {
 			console.log('done')

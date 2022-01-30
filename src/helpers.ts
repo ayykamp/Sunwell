@@ -1,4 +1,4 @@
-import {CardClass, CardSet, CardType, Race, Rarity} from "./Enums";
+import {CardClass, CardSet, CardType, Race, Rarity, SpellSchool} from "./Enums";
 import {IPoint} from "./interfaces";
 
 const RaceNames = {
@@ -148,6 +148,31 @@ const RaceNames = {
 	},
 };
 
+// TODO: Add all languages like for RaceNames
+const SpellSchoolNames = {
+	[SpellSchool.ARCANE]: {
+		default: "Arcane"
+	},
+	[SpellSchool.FIRE]: {
+		default: "Fire"
+	},
+	[SpellSchool.FROST]: {
+		default: "Frost"
+	},
+	[SpellSchool.NATURE]: {
+		default: "Nature"
+	},
+	[SpellSchool.HOLY]: {
+		default: "Holy"
+	},
+	[SpellSchool.SHADOW]: {
+		default: "Shadow"
+	},
+	[SpellSchool.FEL]: {
+		default: "Fel"
+	}
+}
+
 export function cleanEnum(val: string | number, e) {
 	if (typeof val === "string") {
 		if (val in e) {
@@ -285,6 +310,14 @@ export function getRaceText(race: Race, cardType: CardType, language: string): s
 		return RaceNames[race][language] || "";
 	}
 	return "";
+}
+
+export function getSpellSchool(spellSchool: SpellSchool, cardType: CardType): string {
+	if (cardType === CardType.SPELL) {
+		console.log(spellSchool)
+		return SpellSchoolNames[spellSchool].default || "";
+	}
+	return "Arcane";
 }
 
 export function getRarityGem(rarity: Rarity, set: CardSet, type?: CardType): Rarity {

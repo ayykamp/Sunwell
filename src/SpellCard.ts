@@ -39,6 +39,7 @@ export default class SpellCard extends Card {
 		dWidth: 507,
 		dHeight: 155,
 	};
+	public spellSchoolBannerAsset = "spell-school-banner";
 	public rarityGemCoords = {
 		sWidth: 116,
 		sHeight: 77,
